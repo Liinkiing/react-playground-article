@@ -11,34 +11,39 @@ const ListItem = styled.li`
 `
 
 class App extends Component {
-    constructor (props) {
-        super(props)
-        this.state = {
-            newTodo: '',
-            todos: [
-                {
-                    id: 1,
-                    name: 'Todo 1',
-                    dueDate: new Date()
-                },
-                {
-                    id: 2,
-                    name: 'Todo 2',
-                    dueDate: new Date()
-                },
-                {
-                    id: 3,
-                    name: 'Todo 3',
-                    dueDate: new Date()
-                },
-                {
-                    id: 4,
-                    name: 'Todo 4',
-                    dueDate: new Date()
-                }
-            ]
-        }
+
+    state = {
+        newTodo: '',
+        todos: [
+            {
+                id: 1,
+                name: 'Todo 1',
+                dueDate: new Date()
+            },
+            {
+                id: 2,
+                name: 'Todo 2',
+                dueDate: new Date()
+            },
+            {
+                id: 3,
+                name: 'Todo 3',
+                dueDate: new Date()
+            },
+            {
+                id: 4,
+                name: 'Todo 4',
+                dueDate: new Date()
+            }
+        ]
     }
+
+    // Si votre state dépends des props, vous devez l'initialiser comme ceci, sinon préférez l'approche du dessus, qui est plus recommandé
+    // constructor (props) {
+    //     super(props)
+    //     this.state = {
+    //     }
+    // }
 
     handleChange = (e) => {
         this.setState({
